@@ -1,7 +1,7 @@
 {
   "name": "auto-dark-mode",
   "displayName": "Auto Dark Mode",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "repository": "LinusU/vscode-auto-dark-mode",
   "publisher": "LinusU",
@@ -20,7 +20,7 @@
     "vscode": "^1.29.0"
   },
   "contributes": {
-    "configuration":{
+    "configuration": {
       "title": "Auto Dark Mode",
       "properties": {
         "autoDarkMode.darkTheme": {
