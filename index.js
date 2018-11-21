@@ -1,19 +1,9 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
-const fs = require('fs')
+const { workspace } = require('vscode')
 
 let DarkModeModule
 
 function switchTheme (target) {
-  let data = fs.readFileSync(`${process.env.HOME}/Library/Application\ Support/Code/User/settings.json`).toString()
-
-  if (target === 'dark') {
-    data = data.replace('"workbench.colorTheme": "Default Light+"', '"workbench.colorTheme": "Default Dark+"')
-  } else {
-    data = data.replace('"workbench.colorTheme": "Default Dark+"', '"workbench.colorTheme": "Default Light+"')
-  }
-
-  fs.writeFileSync(`${process.env.HOME}/Library/Application\ Support/Code/User/settings.json`, data)
+  workspace.getConfiguration('workbench').update('colorTheme', (target === 'dark' ? 'Default Dark+' : 'Default Light+'), true)
 }
 
 // this method is called when your extension is activated
