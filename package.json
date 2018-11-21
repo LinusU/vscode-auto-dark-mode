@@ -19,6 +19,23 @@
   "engines": {
     "vscode": "^1.29.0"
   },
+  "contributes": {
+    "configuration":{
+      "title": "Auto Dark Mode",
+      "properties": {
+        "autoDarkMode.darkTheme": {
+          "type": "string",
+          "default": "Default Dark+",
+          "description": "Specifies which theme is to be shown when dark mode if on."
+        },
+        "autoDarkMode.lightTheme": {
+          "type": "string",
+          "default": "Default Light+",
+          "description": "Specifies which theme is to be shown when dark mode if off."
+        }
+      }
+    }
+  },
   "categories": [
     "Other"
   ],

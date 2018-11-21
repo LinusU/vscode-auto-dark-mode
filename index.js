@@ -1,9 +1,10 @@
-const { workspace } = require('vscode')
+const { workspace, ConfigurationTarget } = require('vscode')
 
 let DarkModeModule
 
 function switchTheme (target) {
-  workspace.getConfiguration('workbench').update('colorTheme', (target === 'dark' ? 'Default Dark+' : 'Default Light+'), true)
+  const colorTheme = workspace.getConfiguration('autoDarkMode').get(`${target}Theme`)
+  workspace.getConfiguration('workbench').update('colorTheme', colorTheme, ConfigurationTarget.Global)
 }
 
 // this method is called when your extension is activated
