@@ -1,10 +1,33 @@
+const os = require('os')
+const path = require('path')
 const { workspace, ConfigurationTarget } = require('vscode')
 
 let DarkModeModule
 
-function switchTheme (target) {
-  const colorTheme = workspace.getConfiguration('autoDarkMode').get(`${target}Theme`)
-  workspace.getConfiguration('workbench').update('colorTheme', colorTheme, ConfigurationTarget.Global)
+const lockfilePath = path.join(os.tmpdir(), 'vscode-auto-dark-mode-lock')
+
+async function switchTheme (target) {
+  const lockfile = require('proper-lockfile')
+
+  let release
+  try {
+    release = await lockfile.lock('', { lockfilePath })
+  } catch (err) {
+    if (err.code === 'ELOCKED') {
+      // Another
+      return
+    }
+
+    throw err
+  }
+
+  try {
+    const colorTheme = workspace.getConfiguration('autoDarkMode').get(`${target}Theme`)
+    workspace.getConfiguration('workbench').update('colorTheme', colorTheme, ConfigurationTarget.Global)
+  } finally {
+    // Give VS Code some time to save the new settings
+    setTimeout(release, 1000)
+  }
 }
 
 // this method is called when your extension is activated
