@@ -27,12 +27,12 @@
         "autoDarkMode.darkTheme": {
           "type": "string",
           "default": "Default Dark+",
-          "description": "Specifies which theme is to be shown when dark mode if on."
+          "description": "Specifies which theme is to be shown when dark mode is on."
         },
         "autoDarkMode.lightTheme": {
           "type": "string",
           "default": "Default Light+",
-          "description": "Specifies which theme is to be shown when dark mode if off."
+          "description": "Specifies which theme is to be shown when dark mode is off."
         }
       }
     }
