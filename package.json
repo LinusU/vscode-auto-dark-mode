@@ -20,6 +20,7 @@
   "engines": {
     "vscode": "^1.29.0"
   },
+  "extensionKind": "ui",
   "contributes": {
     "configuration": {
       "title": "Auto Dark Mode",
