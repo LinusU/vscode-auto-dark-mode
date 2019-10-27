@@ -6,10 +6,12 @@ Currently only the macOS platform is supported.
 
 ## Configuration
 
-The extension exposes two configuration fields for you to select a dark and a light theme.
+The extension exposes four configuration fields for you to select a dark and a light theme.
 
 - `autoDarkMode.darkTheme` - Specifies which theme is to be shown when dark mode is on
 - `autoDarkMode.lightTheme` - Specifies which theme is to be shown when dark mode is off
+- `autoDarkMode.darkIconTheme` - Specifies which icon theme is to be shown when dark mode is on (optional)
+- `autoDarkMode.lightIconTheme` - Specifies which icon theme is to be shown when dark mode is off (optional)
 
 ## Status
 
