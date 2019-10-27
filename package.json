@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "dark-mode-listener": "^0.1.1",
-    "proper-lockfile": "^3.2.0"
+    "proper-lockfile": "^4.1.1"
   },
   "devDependencies": {
-    "vscode": "^1.1.30"
+    "vscode": "^1.1.36"
   },
   "engines": {
     "vscode": "^1.29.0"
