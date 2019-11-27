@@ -11,7 +11,7 @@
     "test": "node ./node_modules/vscode/bin/test"
   },
   "dependencies": {
-    "dark-mode-listener": "^0.1.1",
+    "dark-mode-listener": "^0.1.2",
     "proper-lockfile": "^4.1.1"
   },
   "devDependencies": {
