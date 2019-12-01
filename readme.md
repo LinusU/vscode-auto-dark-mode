@@ -2,7 +2,7 @@
 
 Automatically switch between light and dark themes depending on the system dark mode toggle.
 
-Currently only the macOS platform is supported.
+Currently only the macOS & Windows platforms are supported.
 
 ## Configuration
 
