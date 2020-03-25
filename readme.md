@@ -1,5 +1,7 @@
 # auto-dark-mode
 
+**Note:** As of VSCode 1.42, there are [native user settings](https://code.visualstudio.com/updates/v1_42#_auto-switch-theme-based-on-os-color-scheme) you can use to simulate the `darkTheme` and `lightTheme` options. This extension is still handy for switching between icon themes though.
+
 Automatically switch between light and dark themes depending on the system dark mode toggle.
 
 Currently only the macOS & Windows platforms are supported.
